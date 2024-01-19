@@ -1,0 +1,94 @@
+// Breakpoints
+$tablet-and-below: 1100px;
+$mobile-and-below: 550px;
+
+// $tablet-background-image: 768px;
+// $mobile-background-image: 375px;
+
+// CSS Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  // line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+// Global baseline styles
+:root {
+  // Colors in Design System
+  --01-AD1FE1: hsl(282deg 83% 52%);
+  --02-4661E6: hsl(230deg 76% 59%);
+  --03-373F68: hsl(230deg 31% 31%);
+  --04-FFFFFF: hsl(0deg 0% 100%);
+
+  --05-F2F4FF: hsl(231deg 100% 97%);
+  --06-F7F8FD: hsl(230deg 60% 98%);
+  --07-3A4374: hsl(231deg 33% 34%);
+  --08-647196: hsl(224deg 20% 49%);
+
+  --09-F49F85: hsl(14deg 83% 74%);
+  --10-62BCFA: hsl(204deg 94% 68%);
+
+  //font sizes
+  --font-size-heading-1: 24px;
+  --font-size-heading-2: 20px;
+  --font-size-heading-3: 18px;
+  --font-size-heading-4: 14px;
+
+  --font-size-body-1: 16px;
+  --font-size-body-2: 15px;
+  --font-size-body-3: 13px;
+
+  //line heights
+  --line-height-heading-1: 35px;
+  --line-height-heading-2: 29px;
+  --line-height-heading-3: 26px;
+  --line-height-heading-4: 20px;
+
+  --line-height-body-1: 23px;
+  --line-height-body-2: 22px;
+  --line-height-body-3: 19px;
+
+  //font weight
+  --font-weight-heading: 700;
+
+  --font-weight-body-1-2: 400;
+  --font-weight-body-3: 600;
+}
