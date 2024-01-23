@@ -1,0 +1,111 @@
+.wrapper {
+  width: 825px;
+  height: 151px;
+  background-color: var(--04-FFFFFF);
+  border-radius: 10px;
+  padding: 28px 32px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.upvote {
+  width: 40px;
+  height: 53px;
+  border-radius: 10px;
+  padding-bottom: 8px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 14px;
+  background-color: var(--05-F2F4FF);
+
+  font-size: var(--font-size-body-3);
+  font-weight: var(--font-weight-body-3);
+  // prettier-ignore
+  color: var(--02-4661E6);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    // prettier-ignore
+    color: var(--02-4661E6);
+    background-color: hsl(230, 100%, 91%);
+    cursor: pointer;
+  }
+}
+
+.votenumber {
+  font-size: var(--font-size-body-3);
+  font-weight: var(--font-weight-heading);
+  letter-spacing: -0.18px;
+  color: var(--07-3A4374);
+}
+
+.middlewrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.title {
+  font-size: var(--font-size-heading-3);
+  font-weight: var(--font-weight-heading);
+  color: var(--07-3A4374);
+  letter-spacing: -0.25px;
+}
+
+.description {
+  font-size: var(--font-size-body-1);
+  font-weight: var(--font-weight-body-1-2);
+  color: var(--08-647196);
+}
+
+.category {
+  margin-top: auto;
+
+  border-radius: 10px;
+  background-color: var(--05-F2F4FF);
+
+  font-size: var(--font-size-body-3);
+  font-weight: var(--font-weight-body-3);
+  // prettier-ignore
+  color: var(--02-4661E6);
+
+  display: grid;
+  place-content: center;
+
+  padding-top: 6px;
+  padding-left: 16px;
+  padding-bottom: 6px;
+  padding-right: 16px;
+
+  &:hover {
+    // prettier-ignore
+    color: var(--02-4661E6);
+    background-color: hsl(230, 100%, 91%);
+    cursor: pointer;
+  }
+}
+
+.rightwrapper {
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.commentcount {
+  font-size: var(--font-size-body-1);
+  font-weight: var(--font-weight-heading);
+  color: var(--07-3A4374);
+  letter-spacing: -0.22px;
+}
