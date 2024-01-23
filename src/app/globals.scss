@@ -21,6 +21,7 @@ body {
 body {
   // line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--06-F7F8FD);
 }
 img,
 picture,
@@ -48,6 +49,17 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+
+a {
+  color: inherit;
 }
 
 // Global baseline styles

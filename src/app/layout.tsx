@@ -7,7 +7,7 @@ const jost = Jost({
 });
 
 export const metadata = {
-  title: 'Designo Agency Website',
+  title: 'Product Feedback App',
 };
 
 export default function RootLayout({

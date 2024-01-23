@@ -1,0 +1,24 @@
+.wrapper {
+  background-image: url('/suggestions/desktop/background-header.png');
+  width: 255px;
+  height: 137px;
+
+  padding-left: 24px;
+  padding-top: 62px;
+
+  border-radius: 10px;
+}
+
+.heading {
+  color: var(--04-FFFFFF);
+  font-size: var(--font-size-heading-2);
+  font-weight: var(--font-weight-heading);
+  letter-spacing: -0.25px;
+}
+
+.text {
+  color: var(--04-FFFFFF);
+  font-size: var(--font-size-body-2);
+  font-weight: 500;
+  opacity: 0.75;
+}

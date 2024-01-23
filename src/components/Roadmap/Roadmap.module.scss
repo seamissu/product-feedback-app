@@ -1,0 +1,80 @@
+.wrapper {
+  width: 255px;
+  height: 178px;
+  border-radius: 10px;
+  background-color: var(--04-FFFFFF);
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.firstwrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: auto;
+}
+
+.roadmap {
+  color: var(--07-3A4374);
+  font-size: var(--font-size-heading-3);
+  font-weight: var(--font-weight-heading);
+  letter-spacing: -0.25px;
+}
+
+.viewlink {
+  // prettier-ignore
+  color: var(--02-4661E6);
+  font-size: var(--font-size-body-3);
+  font-weight: var(--font-weight-body-3);
+
+  &:hover {
+    color: hsl(230, 89%, 74%);
+  }
+}
+
+.pinkcircle {
+  border-radius: 50%;
+  background-color: var(--09-F49F85);
+  width: 8px;
+  height: 8px;
+}
+
+.purplecircle {
+  border-radius: 50%;
+  background-color: var(--01-AD1FE1);
+  width: 8px;
+  height: 8px;
+}
+
+.bluecircule {
+  border-radius: 50%;
+  background-color: var(--10-62BCFA);
+  width: 8px;
+  height: 8px;
+}
+
+.roadmaptext {
+  color: var(--08-647196);
+  font-size: var(--font-size-body-1);
+  font-weight: var(--font-weight-body-1-2);
+}
+
+.roadmapcount {
+  color: var(--08-647196);
+  font-size: var(--font-size-body-1);
+  font-weight: var(--font-weight-heading);
+
+  margin-left: auto;
+}
+
+.linewrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
