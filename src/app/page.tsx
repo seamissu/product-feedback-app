@@ -8,12 +8,22 @@ import Suggestion from '@/components/Suggestion';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <TopBar />
-      <Suggestion />
-      <Logo />
-      <CategoryGrid category={'ui'} />
-      <Roadmap />
+    <main className={styles.wrapper}>
+      <div className={styles.side}>
+        <Logo />
+        <CategoryGrid category={'ui'} />
+        <Roadmap />
+      </div>
+
+      <div className={styles.main}>
+        <TopBar />
+        <Suggestion />
+        <Suggestion />
+        <Suggestion />
+        <Suggestion />
+        <Suggestion />
+        <Suggestion />
+      </div>
     </main>
   );
 }

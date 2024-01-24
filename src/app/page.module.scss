@@ -1,9 +1,30 @@
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+
+  padding-left: 165px;
+  padding-right: 165px;
+  padding-top: 94px;
+  padding-bottom: 129px;
+
+  display: grid;
+
+  place-content: center;
+
+  grid-template-areas: 'side main';
+  grid-template-rows: 1fr;
+  grid-template-columns: 255px 825px;
+  gap: 30px;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
-  gap: 60px;
+  gap: 24px;
 }
