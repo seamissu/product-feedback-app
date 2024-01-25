@@ -2,7 +2,15 @@ import * as React from 'react';
 import styles from './Roadmap.module.scss';
 import Link from 'next/link';
 
-function Roadmap() {
+function Roadmap({
+  plannedCount,
+  inprogressCount,
+  liveCount,
+}: {
+  plannedCount: number | undefined;
+  inprogressCount: number | undefined;
+  liveCount: number | undefined;
+}) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.firstwrapper}>
@@ -14,17 +22,17 @@ function Roadmap() {
       <div className={styles.linewrapper}>
         <div className={styles.pinkcircle}></div>
         <p className={styles.roadmaptext}>Planned</p>
-        <p className={styles.roadmapcount}>2</p>
+        <p className={styles.roadmapcount}>{plannedCount}</p>
       </div>
       <div className={styles.linewrapper}>
         <div className={styles.purplecircle}></div>
         <p className={styles.roadmaptext}>{'In-Progress'}</p>
-        <p className={styles.roadmapcount}>3</p>
+        <p className={styles.roadmapcount}>{inprogressCount}</p>
       </div>
       <div className={styles.linewrapper}>
         <div className={styles.bluecircule}></div>
         <p className={styles.roadmaptext}>Live</p>
-        <p className={styles.roadmapcount}>1</p>
+        <p className={styles.roadmapcount}>{liveCount}</p>
       </div>
     </div>
   );

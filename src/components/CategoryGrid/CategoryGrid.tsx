@@ -4,26 +4,39 @@ import * as React from 'react';
 import styles from './CategoryGrid.module.scss';
 import { clsx } from 'clsx';
 
-function CategoryGrid({ category }: { category: string }) {
-  const [firstArray, setFirstArray] = React.useState([]);
+import type { State } from '@/app/page';
 
-  // const buttonClassName = `${styles.category} ${styles[category]}`;
+function CategoryGrid({
+  state,
+  handleCategory,
+}: {
+  state: State;
+  handleCategory: (
+    category: 'all' | 'ui' | 'ux' | 'enhancement' | 'bug' | 'feature'
+  ) => void;
+}) {
+  // const [firstArray, setFirstArray] = React.useState([]);
 
-  function handleCategory() {
-    if (category !== 'all') {
-      setFirstArray((firstArray) =>
-        firstArray.filter(
-          (feedback) => feedback[category] === category
-        )
-      );
-    }
-  }
+  // function handleCategory() {
+  //   if (category !== 'all') {
+  //     setFirstArray((firstArray) =>
+  //       firstArray.filter(
+  //         (feedback) => feedback[category] === category
+  //       )
+  //     );
+  //   }
+  // }
+
+  const category = state.category;
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.wrapperline}>
         <button
-          onClick={handleCategory}
+          onClick={(event) => {
+            event.preventDefault();
+            handleCategory('all');
+          }}
           className={clsx({
             [styles.category]: true,
             [styles.all]: category === 'all',
@@ -32,7 +45,10 @@ function CategoryGrid({ category }: { category: string }) {
           All
         </button>
         <button
-          onClick={handleCategory}
+          onClick={(event) => {
+            event.preventDefault();
+            handleCategory('ui');
+          }}
           className={clsx({
             [styles.category]: true,
             [styles.all]: category === 'ui',
@@ -41,7 +57,10 @@ function CategoryGrid({ category }: { category: string }) {
           UI
         </button>
         <button
-          onClick={handleCategory}
+          onClick={(event) => {
+            event.preventDefault();
+            handleCategory('ux');
+          }}
           className={clsx({
             [styles.category]: true,
             [styles.all]: category === 'ux',
@@ -52,7 +71,10 @@ function CategoryGrid({ category }: { category: string }) {
       </div>
       <div className={styles.wrapperline}>
         <button
-          onClick={handleCategory}
+          onClick={(event) => {
+            event.preventDefault();
+            handleCategory('enhancement');
+          }}
           className={clsx({
             [styles.category]: true,
             [styles.all]: category === 'enhancement',
@@ -61,7 +83,10 @@ function CategoryGrid({ category }: { category: string }) {
           Enhancement
         </button>
         <button
-          onClick={handleCategory}
+          onClick={(event) => {
+            event.preventDefault();
+            handleCategory('bug');
+          }}
           className={clsx({
             [styles.category]: true,
             [styles.all]: category === 'bug',
@@ -72,7 +97,10 @@ function CategoryGrid({ category }: { category: string }) {
       </div>
       <div className={styles.wrapperline}>
         <button
-          onClick={handleCategory}
+          onClick={(event) => {
+            event.preventDefault();
+            handleCategory('feature');
+          }}
           className={clsx({
             [styles.category]: true,
             [styles.all]: category === 'feature',

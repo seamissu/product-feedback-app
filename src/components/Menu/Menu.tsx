@@ -4,7 +4,17 @@ import * as React from 'react';
 import * as Ariakit from '@ariakit/react';
 import styles from './Menu.module.scss';
 
-export default function Menu() {
+export default function Menu({
+  handleSortBy,
+}: {
+  handleSortBy: (
+    sortby:
+      | 'DescByUpvotes'
+      | 'AscByUpvotes'
+      | 'DescByComments'
+      | 'AscByComments'
+  ) => void;
+}) {
   return (
     <Ariakit.MenuProvider>
       <Ariakit.MenuButton className={styles.button}>
@@ -14,17 +24,38 @@ export default function Menu() {
       <Ariakit.Menu gutter={8} className={styles.menu}>
         <Ariakit.MenuItem
           className={styles['menu-item']}
-          onClick={() => alert('Edit')}
+          onClick={(event) => {
+            event.preventDefault();
+            handleSortBy('DescByUpvotes');
+          }}
         >
           Most Upvotes
         </Ariakit.MenuItem>
-        <Ariakit.MenuItem className={styles['menu-item']}>
+        <Ariakit.MenuItem
+          className={styles['menu-item']}
+          onClick={(event) => {
+            event.preventDefault();
+            handleSortBy('AscByUpvotes');
+          }}
+        >
           Least Upvotes
         </Ariakit.MenuItem>
-        <Ariakit.MenuItem className={styles['menu-item']}>
+        <Ariakit.MenuItem
+          className={styles['menu-item']}
+          onClick={(event) => {
+            event.preventDefault();
+            handleSortBy('DescByComments');
+          }}
+        >
           Most Comments
         </Ariakit.MenuItem>
-        <Ariakit.MenuItem className={styles['menu-item']}>
+        <Ariakit.MenuItem
+          className={styles['menu-item']}
+          onClick={(event) => {
+            event.preventDefault();
+            handleSortBy('AscByComments');
+          }}
+        >
           Least Comments
         </Ariakit.MenuItem>
       </Ariakit.Menu>
